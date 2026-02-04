@@ -1,0 +1,104 @@
+/* --- GLOBAL.CSS --- */
+/* Core styles, Variables, Navigation, and Footer */
+
+:root {
+    /* --- COLOR PALETTE (Warm Stone & Earth Tones) --- */
+    --bg-body: #E6E2DD;       /* Warm Stone */
+    --bg-card: #F4F1EA;       /* Lighter Cream */
+    --bg-overlay: rgba(44, 44, 44, 0.95); /* Dark Charcoal for Lightbox */
+    
+    --text-main: #2C2C2C;     /* Soft Charcoal */
+    --text-muted: #666055;    /* Muted Earth */
+    
+    /* Section Accents */
+    --accent-gallery: #D96C4A; /* Terracotta */
+    --accent-work: #3A6B6B;    /* Muted Teal */
+    --accent-about: #D4A373;   /* Sand */
+    
+    /* Dimensions & Spacing */
+    --nav-height: 80px;       /* Slightly taller for rotated text */
+    --gap: clamp(1.5rem, 4vw, 3rem);
+    --radius: 12px;
+    --container: 1200px;
+}
+
+/* --- CORE RESET & GLOBAL --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: clamp(1rem, 1.1vw, 1.2rem);
+    line-height: 1.6;
+    margin: 0;
+}
+
+a { text-decoration: none; color: inherit; transition: opacity 0.2s; cursor: pointer; }
+
+/* Aspect Ratio Fix: Ensure images never stretch */
+img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+h1, h2, h3 { font-weight: 700; color: var(--text-main); }
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--gap);
+}
+
+/* --- NAVIGATION (Global) --- */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg-body);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    height: var(--nav-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--gap);
+}
+
+/* Rotated Name Branding */
+.brand { 
+    font-weight: 900; 
+    font-size: 1.3rem; 
+    line-height: 0.8;       /* Pulls SZY and MON close together */
+    letter-spacing: -0.05em; 
+    text-transform: uppercase;
+    transform: rotate(-7deg); 
+    display: inline-block;    
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.brand:hover {
+    transform: rotate(0deg) scale(1.1);
+    color: var(--accent-gallery);
+}
+
+.nav-links { display: flex; gap: var(--gap); font-size: 0.95rem; font-weight: 600; }
+.nav-links a:hover { opacity: 0.6; }
+
+/* --- PAGE CONTAINER (Global) --- */
+main {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+/* --- FOOTER (Global) --- */
+footer {
+    text-align: center;
+    padding: 4rem var(--gap);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-top: var(--gap);
+}
+.email-link { font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 700; text-decoration: underline; }
+.email-link:hover { background-color: var(--text-main); color: var(--bg-body); text-decoration: none; }

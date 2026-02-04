@@ -1,0 +1,31 @@
+/* --- HOME.CSS --- */
+/* Styles specific to index.html */
+
+.home-stack { display: flex; flex-direction: column; gap: var(--gap); }
+
+.teaser-card {
+    background: var(--bg-card);
+    padding: clamp(2rem, 5vw, 4rem);
+    border-radius: var(--radius);
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: var(--gap);
+    transition: transform 0.2s ease;
+}
+.teaser-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+.teaser-content { flex: 1 1 300px; }
+.teaser-visual  { flex: 1 1 300px; }
+
+/* Section Specific Accents */
+.teaser-gallery h2 { color: var(--accent-gallery); }
+.teaser-work h2 { color: var(--accent-work); }
+.teaser-about h2 { color: var(--accent-about); }
+
+.btn-arrow {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+    border-bottom: 2px solid currentColor;
+}

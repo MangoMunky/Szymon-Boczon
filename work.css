@@ -1,0 +1,35 @@
+/* --- WORK.CSS --- */
+/* Styles specific to work.html (Timeline layout) */
+
+.timeline {
+    position: relative;
+    border-left: 2px solid rgba(0,0,0,0.1);
+    padding-left: var(--gap);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.event {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--gap);
+    align-items: start;
+    position: relative;
+}
+
+/* The timeline dot */
+.event::before {
+    content: '';
+    position: absolute;
+    left: calc(var(--gap) * -1 - 6px);
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background: var(--text-main);
+    border-radius: 50%;
+}
+
+.event-meta { font-family: monospace; color: var(--text-muted); margin-bottom: 0.5rem; }
+.event-role { font-size: 1.8rem; font-weight: 700; line-height: 1.1; }
+.event-company { font-style: italic; color: var(--accent-work); margin-bottom: 1rem; display: block; font-weight: 600;}
