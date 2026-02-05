@@ -10,7 +10,7 @@ const folderPath = 'images/';
 
 for (let i = 1; i <= totalImages; i++) {
     // Construct filename
-    const fullPath = `${folderPath}image (${i}).png`;
+    const fullPath = `${folderPath}image (${i}).webp`;
 
     // 1. Create structure
     const container = document.createElement('div');
