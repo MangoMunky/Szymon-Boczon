@@ -83,6 +83,10 @@ nav {
     color: var(--accent-gallery);
 }
 
+.brand:active {
+    transform:scale(0.95) rotate(-7deg);
+}
+
 .nav-links { display: flex; gap: var(--gap); font-size: 0.95rem; font-weight: 600; }
 .nav-links a:hover { opacity: 0.6; }
 
