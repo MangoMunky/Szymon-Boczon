@@ -5,7 +5,7 @@ const closeBtn = document.getElementById('closeBtn');
 
 // CONFIGURATION
 const totalImages = 20;
-const folderPath = 'images/'; 
+const folderPath = 'galleryImages/'; 
 // NOTE: Ensure you have a folder named 'images' with files named "image (1).png", etc.
 
 for (let i = 1; i <= totalImages; i++) {
