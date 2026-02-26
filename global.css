@@ -100,9 +100,12 @@ main {
 /* --- FOOTER (Global) --- */
 footer {
     text-align: center;
-    padding: 4rem var(--gap);
+    padding: 3rem var(--gap);
     border-top: 1px solid rgba(0,0,0,0.1);
     margin-top: var(--gap);
+    display: flex;
+    place-content: center;
+    flex-direction: column;
 }
-.email-link { font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 700; text-decoration: underline; }
-.email-link:hover { background-color: var(--text-main); color: var(--bg-body); text-decoration: none; }
+.email-link { font-size: clamp(1.3rem, 0.1667rem + 4.5333vw, 3rem); font-weight: 700; text-decoration: underline; transition: 0.4s;}
+.email-link:hover { transition: 0.4s; background-color: var(--text-main); color: var(--bg-body); text-decoration: none; }
