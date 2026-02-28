@@ -1,6 +1,39 @@
 /* --- GALLERY.CSS --- */
 /* Styles specific to gallery.html (Masonry & Lightbox) */
 
+/* Tag Filters */
+.filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--text-muted);
+    color: var(--text-muted);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-family: inherit;
+}
+
+.filter-btn:hover {
+    border-color: var(--accent-gallery);
+    color: var(--accent-gallery);
+}
+
+.filter-btn.active {
+    background: var(--accent-gallery);
+    border-color: var(--accent-gallery);
+    color: var(--bg-body);
+}
+
+/* Gallery Layout */
 .gallery {
     column-count: 3; 
     column-gap: var(--gap);
@@ -19,6 +52,13 @@
     margin-bottom: var(--gap);
     position: relative;
     cursor: zoom-in;
+    /* Add a slight fade-in animation when filters change */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 .img-container img {

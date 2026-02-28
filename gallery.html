@@ -21,7 +21,13 @@
 
     <main>
         <h1>Gallery</h1>
-        <h2 style="color: var(--accent-gallery); margin-bottom: 2rem;">Gallery(Make this a link that returns to other gallery options. and those gallery options should show a sliding preview on hover) -->  3D</h2>
+        
+        <div class="filter-tags" id="filter-tags">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="3D">3D</button>
+            <button class="filter-btn" data-filter="Photography">Photography</button>
+            <button class="filter-btn" data-filter="2D">2D</button>
+        </div>
 
         <div class="gallery" id="gallery"></div>
     </main>
