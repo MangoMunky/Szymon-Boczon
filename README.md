@@ -4,3 +4,5 @@ Biggest website I've made so far
 THinking between google analytics, Cloudflare analytics and GoatCounter
 
 ### ADD resume to the website ALSO, make the name of each company, place or school a digital link in the resume for digital users
+
+## Also add a page for certificates so that I can directly link to them from my resume
