@@ -100,7 +100,7 @@ main {
 /* --- FOOTER (Global) --- */
 footer {
     text-align: center;
-    padding: 3rem var(--gap);
+    padding: 3rem, 3rem var(--gap);
     border-top: 1px solid rgba(0,0,0,0.1);
     margin-top: var(--gap);
     display: flex;
