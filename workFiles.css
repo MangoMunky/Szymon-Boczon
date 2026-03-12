@@ -1,0 +1,40 @@
+/* --- VARIABLES --- */
+:root {
+    --card-min: 280px;
+    --card-max: 420px;
+    
+    /* Responsive sizing without media queries */
+    --card-width: clamp(var(--card-min), 25vw, var(--card-max));
+    --font-main: clamp(0.95rem, 1.1vw, 1.1rem);
+    --font-title: clamp(1.5rem, 2.5vw, 2.2rem);
+    --spacing: clamp(20px, 4vw, 40px);
+    
+    /* Visuals */
+    --radius-lg: 32px;
+    --radius-sm: 12px;
+
+}
+
+a{
+    font-weight: bold;
+}
+
+.about-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: var(--spacing); 
+    align-items: start;
+    margin-bottom: var(--spacing);
+}
+
+.about-text {
+    max-width: 65ch; 
+    line-height: 1.6;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+}
