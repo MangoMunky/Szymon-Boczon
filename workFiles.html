@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,67 +9,98 @@
     <link rel="stylesheet" href="workFiles.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
-    <script data-goatcounter="https://sandymango.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://sandymango.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3B72KLEXF"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-V3B72KLEXF');
     </script>
-
 </head>
 
 <body>
     <nav>
         <a href="index.html" class="brand">SZY<br>MON</a>
         <div class="nav-links">
-            <a href="work.html">Work</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html" style="color:var(--accent-gallery)">About</a>
+            <a href="work.html">
+                <span class="fr-txt">Parcours</span>
+                <span class="en-txt">Work</span>
+            </a>
+            <a href="gallery.html">
+                <span class="fr-txt">Galerie</span>
+                <span class="en-txt">Gallery</span>
+            </a>
+            <a href="about.html" style="color:var(--accent-gallery)">
+                <span class="fr-txt">À Propos</span>
+                <span class="en-txt">About</span>
+            </a>
+            <button onclick="toggleLang()" class="lang-btn" aria-label="Switch Language">
+                <span class="fr-txt">EN</span>
+                <span class="en-txt">FR</span>
+            </button>
         </div>
     </nav>
 
     <main>
-        <h1>Files</h1>
+        <h1>
+            <span class="fr-txt">Documents</span>
+            <span class="en-txt">Files</span>
+        </h1>
         <div class="about-grid">
-
                 
                 <div>
-                    <h2>Resume</h2>
+                    <h2>
+                        <span class="fr-txt">Curriculum Vitae</span>
+                        <span class="en-txt">Resume</span>
+                    </h2>
                     <a href="workFiles/Szymon_Boczon_resume.pdf" download>
                         <img loading="eager" fetchpriority="high" src="workFiles/Szymon_Boczon_resume.webp" alt="Photo of my resume">
                     </a>
-                    <a href="workFiles/Szymon_Boczon_resume.pdf" download>DOWNLOAD ⏬</a>
+                    <a href="workFiles/Szymon_Boczon_resume.pdf" download>
+                        <span class="fr-txt">TÉLÉCHARGER ⏬</span>
+                        <span class="en-txt">DOWNLOAD ⏬</span>
+                    </a>
                 </div>
 
                 <div>
-                    <h2>Smart serve</h2>
+                    <h2>Smart Serve</h2>
                     <a href="workFiles/SmartServeOntario_eCertificate.pdf" download>
                         <img src="workFiles/SmartServe.webp" alt="Photo of my smart serve certificate">
                     </a>
-                    <a href="workFiles/SmartServeOntario_eCertificate.pdf" download>DOWNLOAD ⏬</a>
+                    <a href="workFiles/SmartServeOntario_eCertificate.pdf" download>
+                        <span class="fr-txt">TÉLÉCHARGER ⏬</span>
+                        <span class="en-txt">DOWNLOAD ⏬</span>
+                    </a>
                 </div>
 
                 <div>
-                    <h2>WHSA certificate</h2>
+                    <h2>
+                        <span class="fr-txt">Certificat de sécurité (WHSA)</span>
+                        <span class="en-txt">WHSA Certificate</span>
+                    </h2>
                     <a href="workFiles/Safety_certificate.pdf" download>
                         <img src="workFiles/Safety_certificate.webp" alt="Photo of my smart safety certificate">
                     </a>
-                    <a href="workFiles/Safety_certificate.pdf" download>DOWNLOAD ⏬</a>
+                    <a href="workFiles/Safety_certificate.pdf" download>
+                        <span class="fr-txt">TÉLÉCHARGER ⏬</span>
+                        <span class="en-txt">DOWNLOAD ⏬</span>
+                    </a>
                 </div>
 
                 <div>
-                    <h2>WHMIS certificate</h2>
+                    <h2>
+                        <span class="fr-txt">Certificat SIMDUT (WHMIS)</span>
+                        <span class="en-txt">WHMIS Certificate</span>
+                    </h2>
                     <a href="workFiles/whmis_certificate.webp" download>
                         <img src="workFiles/whmis_certificate.webp" alt="Photo of my smart safety certificate">
                     </a>
-                    <a href="workFiles/whmis_certificate.webp" download>DOWNLOAD ⏬</a>
+                    <a href="workFiles/whmis_certificate.webp" download>
+                        <span class="fr-txt">TÉLÉCHARGER ⏬</span>
+                        <span class="en-txt">DOWNLOAD ⏬</span>
+                    </a>
                 </div>
         </div>
     </main>
@@ -77,6 +108,22 @@
         <h2>Contact</h2>
         <a href="mailto:szymonboczon.work@gmail.com" class="email-link">szymonboczon.work@gmail.com</a>
     </footer>
-</body>
 
+    <script>
+        function applyLang(lang) {
+            if (lang === 'en') {
+                document.body.classList.add('lang-en');
+            } else {
+                document.body.classList.remove('lang-en');
+            }
+            localStorage.setItem('site-lang', lang);
+        }
+        function toggleLang() {
+            const current = document.body.classList.contains('lang-en') ? 'fr' : 'en';
+            applyLang(current);
+        }
+        const savedLang = localStorage.getItem('site-lang') || 'fr';
+        applyLang(savedLang);
+    </script>
+</body>
 </html>

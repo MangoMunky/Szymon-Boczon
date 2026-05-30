@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,41 +9,54 @@
     <link rel="stylesheet" href="about.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
-    <script data-goatcounter="https://sandymango.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://sandymango.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3B72KLEXF"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-V3B72KLEXF');
     </script>
-
 </head>
 
 <body>
     <nav>
         <a href="index.html" class="brand">SZY<br>MON</a>
         <div class="nav-links">
-            <a href="work.html">Work</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html" style="color:var(--accent-gallery)">About</a>
+            <a href="work.html">
+                <span class="fr-txt">Parcours</span>
+                <span class="en-txt">Work</span>
+            </a>
+            <a href="gallery.html">
+                <span class="fr-txt">Galerie</span>
+                <span class="en-txt">Gallery</span>
+            </a>
+            <a href="about.html" style="color:var(--accent-gallery)">
+                <span class="fr-txt">À Propos</span>
+                <span class="en-txt">About</span>
+            </a>
+            <button onclick="toggleLang()" class="lang-btn" aria-label="Switch Language">
+                <span class="fr-txt">EN</span>
+                <span class="en-txt">FR</span>
+            </button>
         </div>
     </nav>
 
     <main>
         <div class="about-grid">
             <div class="about-text">
-                <h1>About Me.</h1>
-                <p>I am a multidisciplinary creative based in Toronto. I work with various mediums from code and 3d modeling ot watercolor and illustrating.</p>
-                <p>My favourite sport is bouldering, but due to injury I have taken some time off and have been swimming and going to the gym instead.</p>
+                <h1>
+                    <span class="fr-txt">À Propos de Moi.</span>
+                    <span class="en-txt">About Me.</span>
+                </h1>
+                <p class="fr-txt">Créatif multidisciplinaire basé à Toronto, j'associe le code, la modélisation 3D et les arts visuels traditionnels pour concevoir des expériences numériques claires et immersives.</p>
+                <p class="en-txt">I am a multidisciplinary designer combining system code, 3D systems modeling, and traditional fine arts to design clear, highly interactive digital spaces.</p>
+                
+                <p class="fr-txt">Passionné de bloc, je me consacre actuellement à la natation et à l'entraînement en salle le temps de me rétablir d'une blessure.</p>
+                <p class="en-txt">While currently taking time away from bouldering due to an injury, I balance my structural work with a regular routine of swimming and fitness development.</p>
                 <br>
-                <p><strong>Contact:</strong><br><a href="mailto:szymonboczon.work@gmail.com"
-                        style="text-decoration: underline;">szymonboczon.work@gmail.com</a></p>
+                <p><strong>Contact:</strong><br><a href="mailto:szymonboczon.work@gmail.com" style="text-decoration: underline;">szymonboczon.work@gmail.com</a></p>
             </div>
 
             <div class="about-image">
@@ -51,37 +64,23 @@
             </div>
         </div>
 
-
-<!--
-        <section class="journey-container">
-            <nav class="controls">
-                <button id="prevBtn" class="nav-arrow left" aria-label="Previous Location">
-                    <img src="aboutFiles/arrow.svg" alt="Arrow Left">
-                </button>
-                <button id="nextBtn" class="nav-arrow right" aria-label="Next Location">
-                    <img src="aboutFiles/arrow.svg" alt="Arrow Right">
-                </button>
-            </nav>
-
-            <div class="map-wrapper">
-                <video id="mapVideo" preload="auto" playsinline muted>
-                    <source src="aboutFiles/map.webm" type="video/webm">
-                </video>
-
-
-
-                <article id="info-overlay" class="info-card">
-                    <img id="overlay-img" src="" alt="Destination Preview">
-                    <div class="text-content">
-                        <h2 id="overlay-title"></h2>
-                        <p id="overlay-desc"></p>
-                    </div>
-                </article>
-            </div>
-        </section>
     </main>
--->
     <script src="aboutFiles/script.js"></script>
+    <script>
+        function applyLang(lang) {
+            if (lang === 'en') {
+                document.body.classList.add('lang-en');
+            } else {
+                document.body.classList.remove('lang-en');
+            }
+            localStorage.setItem('site-lang', lang);
+        }
+        function toggleLang() {
+            const current = document.body.classList.contains('lang-en') ? 'fr' : 'en';
+            applyLang(current);
+        }
+        const savedLang = localStorage.getItem('site-lang') || 'fr';
+        applyLang(savedLang);
+    </script>
 </body>
-
 </html>

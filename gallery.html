@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,37 +9,55 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="gallery.js" defer></script>
 
-    <script data-goatcounter="https://sandymango.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://sandymango.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3B72KLEXF"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-V3B72KLEXF');
     </script>
-
 </head>
 <body>
     <nav>
         <a href="index.html" class="brand">SZY<br>MON</a>
         <div class="nav-links">
-            <a href="work.html">Work</a>
-            <a href="gallery.html" style="color:var(--accent-gallery)">Gallery</a>
-            <a href="about.html">About</a>
+            <a href="work.html">
+                <span class="fr-txt">Parcours</span>
+                <span class="en-txt">Work</span>
+            </a>
+            <a href="gallery.html" style="color:var(--accent-gallery)">
+                <span class="fr-txt">Galerie</span>
+                <span class="en-txt">Gallery</span>
+            </a>
+            <a href="about.html">
+                <span class="fr-txt">À Propos</span>
+                <span class="en-txt">About</span>
+            </a>
+            <button onclick="toggleLang()" class="lang-btn" aria-label="Switch Language">
+                <span class="fr-txt">EN</span>
+                <span class="en-txt">FR</span>
+            </button>
         </div>
     </nav>
 
     <main>
-        <h1>Gallery</h1>
+        <h1>
+            <span class="fr-txt">Galerie</span>
+            <span class="en-txt">Gallery</span>
+        </h1>
         
         <div class="filter-tags" id="filter-tags">
-            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn active" data-filter="all">
+                <span class="fr-txt">Tout</span>
+                <span class="en-txt">All</span>
+            </button>
             <button class="filter-btn" data-filter="3D">3D</button>
-            <button class="filter-btn" data-filter="Photography">Photography</button>
+            <button class="filter-btn" data-filter="Photography">
+                <span class="fr-txt">Photographie</span>
+                <span class="en-txt">Photography</span>
+            </button>
             <button class="filter-btn" data-filter="2D">2D</button>
         </div>
 
@@ -51,5 +69,26 @@
         <img id="lightbox-img" src="" alt="Zoomed view">
     </div>
 
+    <footer>
+        <h2>Contact</h2>
+        <a href="mailto:szymonboczon.work@gmail.com" class="email-link">szymonboczon.work@gmail.com</a>
+    </footer>
+
+    <script>
+        function applyLang(lang) {
+            if (lang === 'en') {
+                document.body.classList.add('lang-en');
+            } else {
+                document.body.classList.remove('lang-en');
+            }
+            localStorage.setItem('site-lang', lang);
+        }
+        function toggleLang() {
+            const current = document.body.classList.contains('lang-en') ? 'fr' : 'en';
+            applyLang(current);
+        }
+        const savedLang = localStorage.getItem('site-lang') || 'fr';
+        applyLang(savedLang);
+    </script>
 </body>
 </html>

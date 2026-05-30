@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,41 +8,61 @@
     <link rel="stylesheet" href="work.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
-    <script data-goatcounter="https://sandymango.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+    <script data-goatcounter="https://sandymango.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3B72KLEXF"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-V3B72KLEXF');
     </script>
-
 </head>
 <body>
     <nav>
         <a href="index.html" class="brand">SZY<br>MON</a>
         <div class="nav-links">
-            <a href="work.html" style="color:var(--accent-gallery)">Work</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="about.html">About</a>
+            <a href="work.html" style="color:var(--accent-gallery)">
+                <span class="fr-txt">Parcours</span>
+                <span class="en-txt">Work</span>
+            </a>
+            <a href="gallery.html">
+                <span class="fr-txt">Galerie</span>
+                <span class="en-txt">Gallery</span>
+            </a>
+            <a href="about.html">
+                <span class="fr-txt">À Propos</span>
+                <span class="en-txt">About</span>
+            </a>
+            <button onclick="toggleLang()" class="lang-btn" aria-label="Switch Language">
+                <span class="fr-txt">EN</span>
+                <span class="en-txt">FR</span>
+            </button>
         </div>
     </nav>
 
     <main>
-        <h1>Experience Log</h1>
+        <h1>
+            <span class="fr-txt">Parcours Professionnel</span>
+            <span class="en-txt">Experience Log</span>
+        </h1>
         
         <div class="timeline">
             <article class="event">
                 <div class="event-info">
                     <div class="event-meta">2025 — Present</div>
-                    <div class="event-role">Graphic Communications Management</div>
-                    <span class="event-company">TMU Full time student</span>
-                    <p>Working on projects like this website and other graphic projects</p>
+                    <div class="event-role">
+                        <span class="fr-txt">Gestion des Communications Graphiques</span>
+                        <span class="en-txt">Graphic Communications Management</span>
+                    </div>
+                    <span class="event-company">
+                        <span class="fr-txt">Étudiant à temps plein — TMU</span>
+                        <span class="en-txt">Full-time Student — TMU</span>
+                    </span>
+                    <p>
+                        <span class="fr-txt">Développement de compétences en design d'identité, systèmes d'impression et technologies web appliquées.</span>
+                        <span class="en-txt">Focusing on visual identity design, printing technologies, and functional front-end web development projects.</span>
+                    </p>
                 </div>
                 <div class="event-img">
                     <img fetchpriority="high" src="images/GCMprinter.webp" alt="Work">
@@ -52,9 +72,18 @@
             <article class="event">
                 <div class="event-info">
                     <div class="event-meta">2024 — 2025</div>
-                    <div class="event-role">Organic Agriculture and Food Production</div>
-                    <span class="event-company">Warsaw University Of Life Sciences</span>
-                    <p>Learned about soil science, geology and enviornmental science. The basics of botany and chemistry lab skills</p>
+                    <div class="event-role">
+                        <span class="fr-txt">Agriculture Biologique & Production Alimentaire</span>
+                        <span class="en-txt">Organic Agriculture & Food Production</span>
+                    </div>
+                    <span class="event-company">
+                        <span class="fr-txt">Université des Sciences de la Vie de Varsovie</span>
+                        <span class="en-txt">Warsaw University of Life Sciences</span>
+                    </span>
+                    <p>
+                        <span class="fr-txt">Étude des sciences environnementales, de la botanique et de la chimie appliquée à travers des travaux de recherche en laboratoire.</span>
+                        <span class="en-txt">Studied environmental sciences, botany, and organic chemistry foundations through practical laboratory research.</span>
+                    </p>
                 </div>
                 <div class="event-img">
                     <img src="images/Me_and_the_polish_gang.webp" alt="Work">
@@ -63,10 +92,37 @@
 
             <article class="event">
                 <div class="event-info">
+                    <div class="event-meta">2024</div>
+                    <div class="event-role">
+                        <span class="fr-txt">Stagiaire en Informatique (Co-op)</span>
+                        <span class="en-txt">IT Co-op Student</span>
+                    </div>
+                    <span class="event-company">
+                        <span class="fr-txt">Solutions Technologiques</span>
+                        <span class="en-txt">Tech Solutions Co.</span>
+                    </span>
+                    <p>
+                        <span class="fr-txt">Soutien technique : maintenance des infrastructures réseau, diagnostic matériel et optimisation de systèmes informatiques.</span>
+                        <span class="en-txt">Assisted with hardware deployment, local network maintenance, and administrative systems optimization.</span>
+                    </p>
+                </div>
+                <div class="event-img">
+                    <img src="https://placehold.co/600x400/3A6B6B/FFFFFF?text=IT+Coop" alt="IT Co-op Preview">
+                </div>
+            </article>
+
+            <article class="event">
+                <div class="event-info">
                     <div class="event-meta">2020 — 2024</div>
-                    <div class="event-role">Robotics Red Seal</div>
+                    <div class="event-role">
+                        <span class="fr-txt">Sceau Rouge en Robotique</span>
+                        <span class="en-txt">Robotics Red Seal</span>
+                    </div>
                     <span class="event-company">WTCS</span>
-                    <p>Advanced my coding, CAD and computational skills necessary for robotics, along with other basic highschool knowledge</p>
+                    <p>
+                        <span class="fr-txt">Apprentissage de la programmation système, de la modélisation CAO et de la logique informatique pour la robotique industrielle.</span>
+                        <span class="en-txt">Developed structural coding, CAD design skills, and foundational computational logic for automated systems.</span>
+                    </p>
                 </div>
                 <div class="event-img">
                     <img src="images/disassembledController.webp" alt="Work">
@@ -79,5 +135,22 @@
         <h2>Contact</h2>
         <a href="mailto:szymonboczon.work@gmail.com" class="email-link">szymonboczon.work@gmail.com</a>
     </footer>
+
+    <script>
+        function applyLang(lang) {
+            if (lang === 'en') {
+                document.body.classList.add('lang-en');
+            } else {
+                document.body.classList.remove('lang-en');
+            }
+            localStorage.setItem('site-lang', lang);
+        }
+        function toggleLang() {
+            const current = document.body.classList.contains('lang-en') ? 'fr' : 'en';
+            applyLang(current);
+        }
+        const savedLang = localStorage.getItem('site-lang') || 'fr';
+        applyLang(savedLang);
+    </script>
 </body>
 </html>
