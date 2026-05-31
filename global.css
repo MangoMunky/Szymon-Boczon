@@ -17,7 +17,12 @@
     
     /* Dimensions & Spacing */
     --nav-height: 80px;       /* Slightly taller for rotated text */
-    --gap: clamp(1.5rem, 4vw, 3rem);
+    
+    /* No-Media-Query Fluid Spacing Engine:
+       Lowers the absolute floor to 0.5rem (8px) on small viewports 
+       while maintaining a comfortable 4vw scaling up to 3rem (48px).
+    */
+    --gap: clamp(0.5rem, 3.5vw, 3rem);
     --radius: 12px;
     --container: 1200px;
 }
@@ -63,13 +68,15 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 var(--gap);
+    /* Use a dedicated fluid floor for padding so the edges don't compress too tightly */
+    padding: 0 clamp(0.75rem, 3vw, 3rem);
 }
 
 /* Rotated Name Branding */
 .brand { 
     font-weight: 900; 
-    font-size: 1.3rem; 
+    /* Fluid branding scales gracefully alongside the links */
+    font-size: clamp(1.05rem, 2vw, 1.3rem); 
     line-height: 0.8;       /* Pulls SZY and MON close together */
     letter-spacing: -0.05em; 
     text-transform: uppercase;
@@ -87,15 +94,22 @@ nav {
     transform:scale(0.95) rotate(-7deg);
 }
 
-.nav-links { display: flex; align-items: center; gap: var(--gap); font-size: 0.95rem; font-weight: 600; }
+.nav-links { 
+    display: flex; 
+    align-items: center; 
+    gap: var(--gap); 
+    /* Fluid typography compresses font footprint natively on mobile widths */
+    font-size: clamp(0.8rem, 2vw, 0.95rem); 
+    font-weight: 600; 
+}
 .nav-links a:hover { opacity: 0.6; }
 
 /* Language Switcher Button */
 .lang-btn {
     background: none;
     border: 1px solid currentColor;
-    padding: 6px 10px;
-    font-size: 0.8rem;
+    padding: 4px 8px;
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
     font-weight: 700;
     cursor: pointer;
     border-radius: 4px;
