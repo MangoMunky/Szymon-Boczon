@@ -38,3 +38,44 @@ a{
     border-radius: var(--radius-sm);
     object-fit: cover;
 }
+
+/* --- REFERENCES SECTION --- */
+.section-heading {
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+.reference-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing);
+    height: 100%;
+}
+
+.reference-card h3 {
+    font-size: var(--font-title);
+    margin-bottom: 0.5rem;
+}
+
+.ref-role {
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.ref-contact {
+    font-size: var(--font-main);
+    margin-bottom: 0.25rem;
+}
+
+.ref-contact a {
+    text-decoration: underline;
+}
+
+.ref-note {
+    margin-top: 0.75rem;
+    font-size: var(--font-main);
+    font-style: italic;
+    color: var(--accent-work);
+    font-weight: bold;
+}
